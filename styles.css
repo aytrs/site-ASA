@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #007bff;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.dates-container {
+    margin-bottom: 20px;
+}
+
+.date-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.date-wrapper input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.date-wrapper button {
+    margin-left: 10px; /* Espaçamento adicional para o botão de remoção */
+}
+
+.button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.remove-button {
+    background-color: #dc3545;
+}
+
+.edit-button {
+    background-color: #007bff;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.add-student-button {
+    background-color: #28a745; /* Cor verde para destacar o botão */
+    padding: 15px 30px; /* Tamanho maior do botão */
+    font-size: 16px; /* Fonte maior */
+    text-transform: uppercase; /* Letras maiúsculas */
+    font-weight: bold; /* Fonte em negrito */
+    display: block;
+    margin: 20px auto; /* Centraliza o botão */
+}
+
+.add-student-button:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05);
+}
+
+
+/* Estilos para os botões de adicionar data */
+.add-date-button {
+    background-color: #17a2b8; /* Cor azul clara para o botão */
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-date-button:hover {
+    background-color: #138496; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05);
+}
+
+
+/* Estilos para a tabela e os botões */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Cor de fundo dos cabeçalhos da tabela */
+th {
+    background-color: #007bff !important; /* Azul escuro */
+    color: #fff !important; /* Branco */
+}
+
+td {
+    background-color: #f4f4f4 !important; /* Cinza claro */
+}
+
+/* Estilos para os botões */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+}
+
+.edit-button {
+    background-color: #007bff; /* Azul */
+}
+
+.remove-button {
+    background-color: #dc3545; /* Vermelho */
+}
+
+.reset-button {
+    background-color: #6c757d; /* Cinza */
+}
+
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.date-container-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.date-container-buttons button {
+    margin: 0;
+}
+
+/* Destaque para o mês e ano */
+.month-year {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Adiciona espaçamento entre o botão de adicionar data dada e o texto de aulas faltantes */
+#givenDatesContainer, #missingDatesContainer {
+    margin-bottom: 20px;
+}
+
+#givenDatesContainer {
+    margin-bottom: 30px; /* Espaço adicional entre o botão de adicionar data dada e o próximo texto */
+}
+.reset-button {
+    background-color: #ffc107; /* Cor de fundo amarela para o botão de reset */
+    color: #333; /* Cor do texto */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #e0a800; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para os itens de aula */
+.lesson-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background-color: #ffd207; /* Amarelo para desmarcado */
+}
+
+.lesson-item.checked {
+    background-color: #59e079; /* Verde para marcado */
+}
+
+.lesson-item input[type="checkbox"] {
+    margin-right: 10px;
+}
